@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "myfont";
+    src: url(HappyMonkey-Regular.ttf);
+}
+
+@keyframes slideDown {
+  0% {
+    margin-top: -200px;
+  }
+  100% {
+    margin-top: 35px;
+  }
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ccc;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+   }
+  
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow: auto;
+    background: linear-gradient(45deg, #5363f0, #ac229c) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "myfont", sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 30px;
+    
+  }
+
+  
+
+  .container {
+    width: 350px;
+    height: 350px;
+ 
+  }
+  
+
+  .card,
+  .card2,
+  .card3,
+  .card4 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1000ms;
+    transform-style: preserve-3d;
+    margin-top: -200px;
+    margin-bottom: 35;
+    animation: slideDown 1.5s ease-in-out forwards;
+    
+  }
+  .card:hover,
+  .card2:hover,
+  .card3:hover,
+  .card4:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .front2,
+  .front3,
+  .front4,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25) ;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+
+  .front {
+    background-image: url(images/desk.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.back {
+  background: #3a3a3a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  gap: 2rem;
+}
+
+  
+
+  .front2 {
+    background-image: url(images/mat.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+  
+
+  .front3 {
+    background-image: url(images/chair.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+a.buy {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+a.buy:hover {
+  color: #ac229c;
+}
+
+.front4 {
+  background-image: url(images/rug.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
